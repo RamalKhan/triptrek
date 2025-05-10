@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b3c60e7441.js" crossorigin="anonymous"></script>
+  <title>Trip Trek</title>
+  <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+ 
+  <section class="hero">
+    <div class="hero-content">
+   <div class="hero-text">
+    <h1>Start your journey by one click, explore beautiful world!</h1>
+    <p>Plan and book your perfect trip with expert tips, destination guides, and travel inspiration — all in one place.</p>
+    <button class="explore-btn">Explore More</button>
+   </div>
+   <div class="hero-image">
+    <div class="circle-bg">
+      <div class="ring ring1"></div>
+      <div class="ring ring2"></div>
+      <div class="ring ring3"></div>
+    </div>
+    <div class="main-image-wrapper">
+      <img src="images/girl.png" alt="Traveller" class="main-image">
+  </div>
+  
+    <!-- Floating Cards -->
+    <img src="images/secnery.png" class="floating-card card-left" alt="Explore Pahalgam">
+    <img src="images/hotel.png" class="floating-card card-right" alt="Shalimar Hotel">
+
+    <!-- Floating Icons -->
+    <img src="images/mountain.png" class="floating-icon icon-top-left" alt="Mountain">
+    <img src="images/bag.png" class="floating-icon icon-top-right" alt="Backpack">
+    <div class="orange-dot"></div>
+   </div>
+  </div>
+  </section>
+  <section class="popular-destination">
+    <h2>Popular Destinations</h2>
+    <p class="subtitle">Vacations to make your experience enjoyable in Pakistan.</p>
+  
+    <div class="destination-grid">
+      <!--Destination Card 1-->
+      <div class="destination-card">
+        <img src="images/hunza.jpg" alt="">
+        <div class="destination-info">
+          <p class="location">
+            <i class="fa-solid fa-location-dot"></i> Gilgit Baltistan, Pakistan
+          </p>
+          <h4>Hunza</h4>
+          <p class="duration">3 days</p>
+          <p class="price">Rs.20000 <span>/person</span></p>
+        </div>
+      </div>
+  
+      <!--Destination Card 2-->
+      <div class="destination-card">
+        <img src="images/kumrat.jpg" alt="">
+        <div class="destination-info">
+          <p class="location">
+            <i class="fa-solid fa-location-dot"></i>Upper Dir, Khyber Pakhtunkhwa
+          </p>
+          <h4>kumrat Valley</h4>
+          <p class="duration">3 days</p>
+          <p class="price">Rs.15000 <span>/person</span></p>
+        </div>
+      </div>
+  
+      <!--Destination Card 3-->
+      <div class="destination-card">
+        <img src="images/skardu.jpg" alt="">
+        <div class="destination-info">
+          <p class="location">
+            <i class="fa-solid fa-location-dot"></i>  Skardu District, Gilgit Baltistan
+          </p>
+          <h4>Skardu</h4>
+          <p class="duration">3 days</p>
+          <p class="price">Rs.35000 <span>/person</span></p>
+        </div>
+      </div>
+  
+      <!--Destination Card 4-->
+      <div class="destination-card">
+        <img src="images/swat.jpg" alt="">
+        <div class="destination-info">
+          <p class="location">
+            <i class="fa-solid fa-location-dot"></i> Malakand Division, Khyber Pakhtunkhwa
+          </p>
+          <h4>Swat</h4>
+          <p class="duration">3 days</p>
+          <p class="price">Rs.20000 <span>/person</span></p>
+        </div>
+      </div>
+    </div> 
+  </section>
+   
+  <section class="why-choose-us">
+    <div class="why-content">
+      <div class="why-image">
+        <div class="why-circle-bg">
+          <img src="images/trvellers.png" alt="">
+        </div>
+      </div>
+      <div class="why-text">
+        <h2>Why Choose Us</h2>
+      <p>Enjoy different experiences in every place you visit and discover new affordable adventures of course.</p>
+
+      <div class="features-list">
+        <div class="feature">
+          <div class="icon-box"><i class="fas fa-plane"></i></div>
+          <div>
+            <h3>Flight Ticket</h3>
+            <p>Get the best prices and comfortable flights.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="icon-box"><i class="fas fa-hotel"></i></div>
+          <div>
+            <h3>Accommodation</h3>
+            <p>Top-rated hotels with great deals and service.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div class="icon-box"><i class="fas fa-umbrella-beach"></i></div>
+          <div>
+            <h3>Packaged Tours</h3>
+            <p>Well-planned tours to explore more at ease.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  
+ <div id="footer-placeholder"></div>
+  <script>
+    // Dynamically load the header
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+        // Highlight active link
+      const currentPath = window.location.pathname.split("/").pop();
+      const links = document.querySelectorAll(".nav-link");
+
+      links.forEach(link => {
+        if (link.getAttribute("href") === currentPath) {
+          link.classList.add("active-link");
+        }
+      });
+      });
+      fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-placeholder').innerHTML = data;
+  });
+  </script>
+</body>
+</html>
